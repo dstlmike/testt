@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run install:all",
-    "start": "npm run start",
+    "start:install": "npm run install:all",
+    "start:start": "npm run start",
     "start:client": "cd ./client && npm run start",
     "start:server": "cd ./server && node ./bin/www",
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+    "start": "concurrently \"npm run start:install\" \"npm run start:start\" \"npm run start:server\" \"npm run start:client\""
   },
   "author": "Tarique Ejaz",
   "license": "ISC",
