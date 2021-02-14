@@ -11,7 +11,7 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "start": "npm install && ./server/npm install && ./client/npm install && ./server/npm run start && ./client/npm run start"
+    "start": "npm install && cd ./server && npm install && cd ../client && npm install && cd ../server && npm run start && cd ../client && npm run start"
    
     
   },
