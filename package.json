@@ -11,7 +11,8 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "start": "cd ./server/bin && node www"
+    "start": "cd ./server/bin && node www",
+    "start": "cd ./client && npm run start"
   },
 
   "author": "Tarique Ejaz",
