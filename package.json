@@ -11,7 +11,7 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "start": "concurrently \"npm run start:install\" \"npm run start:start\" \"npm run start:server\" \"npm run start:client\""
+    "start": "concurrently \"npm run start:install\" \"npm run start:server\" \"npm run start:client\""
   },
   "author": "Tarique Ejaz",
   "license": "ISC",
