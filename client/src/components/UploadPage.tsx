@@ -27,7 +27,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
     }
 
     fetchRecent = () => {
-        axios.get('http://localhost:9890/recent')
+        axios.get('http://localhost:8080/recent')
             .then((response) => {
                 this.setState({ recentImage: response.data.image });
             })
@@ -63,7 +63,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
                         </div>
 
                         <img
-                            src={'http://localhost:9890/image/' + this.state.recentImage.filename}
+                            src={'http://localhost:8080/image/' + this.state.recentImage.filename}
                             alt="recent-image"
                             className="Recent__Image"
                         />
