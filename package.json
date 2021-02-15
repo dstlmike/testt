@@ -16,6 +16,6 @@
   "author": "Tarique Ejaz",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^5.3.0"
   }
 }

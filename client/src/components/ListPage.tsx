@@ -44,8 +44,8 @@ class ListPage extends PureComponent<{}, ListState> {
                         <div className="ListImage">
                             <p className="ListImage__Caption">{file.caption}</p>
                             <p className="ListImage__Date">{file.createdAt}</p>
-                            <img
-                                src={'http://localhost:8080/image/' + file.filename}
+                            <img 
+src={'http://localhost:8080/image/' + file.filename}
                                 alt="list-image"
                                 className="ListImage__Image"
                             />

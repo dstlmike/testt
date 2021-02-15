@@ -64,7 +64,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
 
                         <img
                             src={'http://localhost:8080/image/' + this.state.recentImage.filename}
-                            alt="recent-image"
+                            alt="recent-Image"
                             className="Recent__Image"
                         />
                     </div>
