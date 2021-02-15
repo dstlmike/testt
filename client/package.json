@@ -18,7 +18,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "cd ./node_modules/react-scripts/bin && react-scripts start",
+    "start": "node ./node_modules/react-scripts/bin/react-scripts.js build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
