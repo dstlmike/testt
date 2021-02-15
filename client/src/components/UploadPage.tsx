@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import './style.scss';
 import axios from 'axios';
 import Upload from '../assets/images/upload.png';
-
+//
 interface UploadState {
     recentImage: any;
     caption: string;
