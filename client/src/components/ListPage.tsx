@@ -19,6 +19,7 @@ class ListPage extends PureComponent<{}, ListState> {
         axios.get('http://localhost:9890/')
             .then(response => {
                 this.setState({ imageList: response.data.images });
+
             })
             .catch(err => alert(err));
     }

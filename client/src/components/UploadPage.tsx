@@ -21,17 +21,21 @@ class UploadPage extends PureComponent<{}, UploadState> {
             uploadedImage: {},
         };
     }
-
+/*
     componentDidMount = () => {
-    
+    axios.get('http://localhost:9890/', formData)
+.then(responce) => {
+return alert('Hi');
+})
+.catch(err => alert('err: ' + err));
                   
                  
              
 
 
-        this.fetchRecent();
+        //this.fetchRecent();
     }
-
+*/
     fetchRecent = () => {
         axios.get('http://localhost:9890/recent')
             .then((response) => {
@@ -52,7 +56,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
         axios.post('http://localhost:9890/', formData)
             .then((response) => {
                 response.data.success ? alert('File successfully uploaded') : alert('File already exists');
-                this.fetchRecent();
+               // this.fetchRecent();
             })
             .catch(err => alert('Error: ' + err));
     }
@@ -68,8 +72,8 @@ class UploadPage extends PureComponent<{}, UploadState> {
                             <span className="ImageBox__CaptionValue">{this.state.recentImage.caption}</span>
                         </div>
 
-                        <img
-                            src={'http://localhost:9890/image/' + this.state.recentImage.filename}
+                       // <img
+                           // src={'http://localhost:9890/image/' + this.state.recentImage.filename}
                             alt="recent-image"
                             className="Recent__Image"
                         />
