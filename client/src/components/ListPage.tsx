@@ -16,7 +16,7 @@ class ListPage extends PureComponent<{}, ListState> {
     }
 
     componentDidMount = () => {
-        axios.get('http://localhost:9890/')
+        axios.get('http://nodejs-mongo-persistent-alex.b9ad.pro-us-east-1.openshiftapps.com/')
             .then(response => {
                 this.setState({ imageList: response.data.images });
 
@@ -25,7 +25,7 @@ class ListPage extends PureComponent<{}, ListState> {
     }
 
     deleteFile = (id: any) => {
-        axios.get('http://localhost:9890/delete/' + id) 
+        axios.get('http://nodejs-mongo-persistent-alex.b9ad.pro-us-east-1.openshiftapps.com/delete/' + id) 
             .then((response) => {
                 if (response.data.success) {
                     alert('File with ID: ' + id + ' has been deleted');
@@ -46,7 +46,7 @@ class ListPage extends PureComponent<{}, ListState> {
                             <p className="ListImage__Caption">{file.caption}</p>
                             <p className="ListImage__Date">{file.createdAt}</p>
                             <img
-                                src={'http://localhost:9890/image/' + file.filename}
+                                src={'http://nodejs-mongo-persistent-alex.b9ad.pro-us-east-1.openshiftapps.com/image/' + file.filename}
                                 alt="list-image"
                                 className="ListImage__Image"
                             />
