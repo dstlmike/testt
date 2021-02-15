@@ -6,13 +6,16 @@
   "scripts": {
     "start:install": "npm run install:all",
     "start:start": "npm run start",
-    "start:client": "cd ./client && npm run start",
-    "start:server": "cd ./server && node ./bin/www",
+    "start:client": "cd ./client && npm run start ",
+    "start:server": "cd ./server && npm run start",
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+    "start": "cd ./server && npm run start & cd ./client && npm run start"
+   
+    
   },
+
   "author": "Tarique Ejaz",
   "license": "ISC",
   "dependencies": {
