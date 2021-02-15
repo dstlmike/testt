@@ -15,10 +15,10 @@
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "typescript": "^3.7.7"
+    "typescript": "^3.9.9"
   },
   "scripts": {
-    "start": "npm update && node ./node_modules/react-scripts/bin/react-scripts.js build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

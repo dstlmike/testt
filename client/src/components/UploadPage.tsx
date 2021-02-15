@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import './style.scss';
 import axios from 'axios';
 import Upload from '../assets/images/upload.png';
-//
+
 interface UploadState {
     recentImage: any;
     caption: string;
@@ -23,11 +23,17 @@ class UploadPage extends PureComponent<{}, UploadState> {
     }
 
     componentDidMount = () => {
+    
+                  
+                 
+             
+
+
         this.fetchRecent();
     }
 
     fetchRecent = () => {
-        axios.get('http://localhost:8080/recent')
+        axios.get('http://localhost:9890/recent')
             .then((response) => {
                 this.setState({ recentImage: response.data.image });
             })
@@ -43,7 +49,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
         formData.append('caption', this.state.caption);
         formData.append('file', this.state.uploadedImage);
 
-        axios.post('http://localhost:8080/', formData)
+        axios.post('http://localhost:9890/', formData)
             .then((response) => {
                 response.data.success ? alert('File successfully uploaded') : alert('File already exists');
                 this.fetchRecent();
@@ -58,13 +64,13 @@ class UploadPage extends PureComponent<{}, UploadState> {
                     <p className="Recent__Title">Recently uploaded file</p>
                     <div className="ImageBox">
                         <div className="CaptionBox">
-                            <p className="ImageBox__Caption">Caption</p>
+                            <p className="ImageBox__Caption">caption</p>
                             <span className="ImageBox__CaptionValue">{this.state.recentImage.caption}</span>
                         </div>
 
                         <img
-                            src={'http://localhost:8080/image/' + this.state.recentImage.filename}
-                            alt="recent-Image"
+                            src={'http://localhost:9890/image/' + this.state.recentImage.filename}
+                            alt="recent-image"
                             className="Recent__Image"
                         />
                     </div>
