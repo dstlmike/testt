@@ -77,7 +77,8 @@ console.log('Next');
       process.exit(1);
       break;
     default:
-      throw error;
+      //throw error;
+console.log('Next It');
   }
 }
 
