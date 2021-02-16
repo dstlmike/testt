@@ -27,7 +27,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
-app.use(express.static(path.join(__dirname, 'public') || path.join('client/', 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('client/public'));
+
 
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
