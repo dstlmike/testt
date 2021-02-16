@@ -15,8 +15,8 @@ const imageRouter = require('./routes/image');
 const app = express();
 
 // view engine setup
-app.use('views', path.join(__dirname, 'server/views'));
-app.use('views', path.join(__dirname, 'client/views'));
+app.set('views', path.join([__dirname + 'server/views', __dirname + 'client/views']));
+//app.use('views', path.join(__dirname, 'client/views'));
 app.use('view engine', 'jade');
 
 app.use(cors({
@@ -27,8 +27,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
-app.use(express.static(path.join(__dirname, 'server/public')));
-app.use(express.static(path.join(__dirname, 'client/public')));
+app.use(express.static(path.join([__dirname + 'server/public', __dirname + 'client/public])));
+//app.use(express.static(path.join(__dirname,  'client/public')));
 
 
 const mongoose = require('mongoose');
