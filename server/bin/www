@@ -59,7 +59,7 @@ function normalizePort(val) {
 function onError(error) {
   if (error.syscall !== 'listen') {
 console.log('Next');
-   // throw error;
+    throw error;
   }
 
   var bind = typeof port === 'string'
@@ -77,8 +77,9 @@ console.log('Next');
       process.exit(1);
       break;
     default:
-      //throw error;
 console.log('Next It');
+      throw error;
+//console.log('Next It');
   }
 }
 
