@@ -15,8 +15,9 @@ const imageRouter = require('./routes/image');
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views') || 'views', path.join('client/', 'views'));
-app.set('view engine', 'jade');
+app.use('views', path.join(__dirname, 'views');
+app.use'views', 'client/views'));
+app.use('view engine', 'jade');
 
 app.use(cors({
     origin: '*',
