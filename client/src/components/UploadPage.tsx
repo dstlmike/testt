@@ -74,9 +74,9 @@ return alert('Hi');
 
                        // <img
                            // src={'http://nodejs-mongo-persistent-alex.b9ad.pro-us-east-1.openshiftapps.com/image/' + this.state.recentImage.filename}
-                            alt="recent-image"
-                            className="Recent__Image"
-                        />
+                            //alt="recent-image"
+                           // className="Recent__Image"
+                       // />
                     </div>
                 </div>
 
