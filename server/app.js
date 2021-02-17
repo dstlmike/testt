@@ -9,14 +9,14 @@ const multer = require('multer');
 const GridFsStorage = require('multer-gridfs-storage');
 const crypto = require('crypto');
 const cors = require('cors');
-
+const PUBLIC_URL = process.env.PUBLIC_URL || 'http://localhost:' + process.env.PORT + '/client/public' || http://localhost:' + process.env.PORT + '/server/public';
 const imageRouter = require('./routes/image');
 
 const app = express();
 
 // view engine setup
-//app.set('views', ['server/views', 'client/views']); // [__dirname + '/server/views'), path.join(__dirname + 'client/views')]);
-app.set('views', path.join(__dirname, 'client/views'));
+app.set('views', path.join(__dirname + 'views'));
+//app.set('views', path.join(__dirname, 'client/views'));
 app.set('view engine', 'jade');
 
 app.use(cors({
@@ -27,8 +27,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
-app.use(express.static(path.join(__dirname, 'server/public'))); // __dirname + 'client/public'})));
-app.use(express.static(path.join(__dirname, 'client/public')));
+app.use(express.static(path.join(__dirname, './server/public'))); // __dirname + 'client/public'})));
+app.use(express.static(path.join(__dirname, './client/public')));
 
 
 const mongoose = require('mongoose');
