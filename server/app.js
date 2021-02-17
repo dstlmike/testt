@@ -10,12 +10,12 @@ const GridFsStorage = require('multer-gridfs-storage');
 const crypto = require('crypto');
 const cors = require('cors');
 
-const imageRouter = require('./server/routes/image');
+const imageRouter = require('./routes/image');
 
 const app = express();
 
 // view engine setup
-app.set('views', [__dirname + 'server/views', __dirname + 'client/views']);
+app.set('views', [path.join(__dirname + 'server/views'), path.join(__dirname + 'client/views')]);
 //app.use('views', path.join(__dirname, 'client/views'));
 app.use('view engine', 'jade');
 
