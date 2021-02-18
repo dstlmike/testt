@@ -10,7 +10,7 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "start": "cd ./client && react-scripts start", 
+    "start": "cd ./client && start", 
     "start": "cd ./server && node bin/www" 
   },
   "author": "Tarique Ejaz",
