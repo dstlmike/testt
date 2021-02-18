@@ -11,8 +11,8 @@
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
     "hi": "npm run /server/start && npm --prefix run /client/start",
-    "start": "concurrently \"cd ./server && npm start\" \"cd ./client && npm start\""
-   
+    "her": "concurrently \"cd ./server && npm start\" \"cd ./client && npm start\""
+    "start": "node ./server/www & cd ./client && npm start"
   },
   "author": "Tarique Ejaz",
   "license": "ISC",
