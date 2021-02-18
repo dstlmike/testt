@@ -10,7 +10,7 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "start": "npm --prefix /server run start & npm --prefix /client run start",
+    "start": "npm --prefix /server run start && npm --prefix /client run start",
     "dev": "concurrently \"npm run start:server\" \"npm run start:client\""
    
   },
