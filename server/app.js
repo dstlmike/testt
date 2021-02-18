@@ -15,7 +15,7 @@ const imageRouter = require('./routes/image');
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname + 'views'));
+app.set('views', path.join(__dirname + 'views'), '/server/views', '/client/views');
 //app.set('views', path.join(__dirname, 'client/views'));
 app.set('view engine', 'jade');
 
@@ -27,8 +27,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
-app.use(express.static(path.join(__dirname, '/server/public'))); // __dirname + 'client/public'})));
-app.use(express.static(path.join(__dirname, '/client/public')));
+app.use(express.static(path.join(__dirname, 'public'), '/client/public', '/server/public')); // __dirname + 'client/public'})));
+//app.use(express.static(path.join(__dirname, '/client/public')));
 
 
 const mongoose = require('mongoose');
