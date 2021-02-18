@@ -2,7 +2,6 @@
   "name": "gridfs-image-upload",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start:install": "npm run install:all",
     "start:start": "npm run start",
