@@ -10,8 +10,7 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "start": "cd ./client && start", 
-    "start": "cd ./server && node bin/www" 
+    "start": "cd ./client && npm run start", "cd ./server && npm run start" 
   },
   "author": "Tarique Ejaz",
   "license": "ISC",
