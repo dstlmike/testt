@@ -11,7 +11,7 @@
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
     "hi": "npm run /server/start && npm --prefix run /client/start",
-    "start": "concurrently" \"npm ./server start\" \"npm ./client start\""
+    "start": "concurrently \"npm ./server start\" \"npm ./client start\""
    
   },
   "author": "Tarique Ejaz",
