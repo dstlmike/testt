@@ -12,7 +12,7 @@
     "install:all": "npm install && npm run install:server && npm run install:client",
     "hi": "npm r/server/start && npm --prefix run /client/start",
  
-    "start": "npm start:server & npm run start:client"
+    "start": "npm start:server & npm start:client"
   },
   "author": "Tarique Ejaz",
   "license": "ISC",
