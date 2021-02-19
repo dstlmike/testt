@@ -10,9 +10,9 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "hi": "npm run /server/start && npm --prefix run /client/start",
+    "hi": "npm r/server/start && npm --prefix run /client/start",
  
-    "start": "node ./server/www", "cd ./client && npm start"
+    "start": "npm start:server & npm run start:client"
   },
   "author": "Tarique Ejaz",
   "license": "ISC",
