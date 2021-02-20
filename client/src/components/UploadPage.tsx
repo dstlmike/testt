@@ -22,7 +22,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
         };
     }
 
-  //  componentDidMount = () => {
+    componentDidMount = () => {
 /*
     axios.get('http://localhost:9890/', formData)
 .then(responce) => {
@@ -35,10 +35,10 @@ return alert('Hi');
 
 */
       //  this.fetchRecent();
-  //  }
+    }
 
     fetchRecent = () => {
-        axios.get('http://localhost:9890/recent')
+        axios.get('http://localhost:8080/recent')
             .then((response) => {
                 this.setState({ recentImage: response.data.image });
             })
@@ -54,7 +54,7 @@ return alert('Hi');
         formData.append('caption', this.state.caption);
         formData.append('file', this.state.uploadedImage);
 
-        axios.post('http://localhost:9890/', formData)
+        axios.post('http://localhost:8080/', formData)
             .then((response) => {
                 response.data.success ? alert('File successfully uploaded') : alert('File already exists');
                 this.fetchRecent();
@@ -74,7 +74,7 @@ return alert('Hi');
                         </div>
 
                       //  <img
-                        //    src={'http://localhost:9890/image/' + this.state.recentImage.filename}
+                        //    src={'http://localhost:8080/image/' + this.state.recentImage.filename}
                         //    alt="recent-image"
                         //    className="Recent__Image"
                      //   />
