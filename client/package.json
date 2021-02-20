@@ -18,8 +18,8 @@
     "typescript": "^3.9.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "started": "node ./node_modules/react-scripts/bin/react-scripts.js start",
+    "started": "react-scripts start",
+    "start": "node ./node_modules/react-scripts/bin/react-scripts.js start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
