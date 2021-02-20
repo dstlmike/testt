@@ -72,7 +72,8 @@ const storage = new GridFsStorage({
 const upload = multer({ storage });
 
 app.use('/', imageRouter(upload));
-
+app.get('/uploads', (req, res) => {
+res.send('./views/index.jade');
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
