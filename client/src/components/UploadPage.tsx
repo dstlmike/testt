@@ -22,7 +22,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
         };
     }
 
-   // componentDidMount = () => {
+    componentDidMount = () => {
 /*
     axios.get('http://localhost:9890/', formData)
 .then(responce) => {
@@ -35,7 +35,7 @@ return alert('Hi');
 
 */
         //this.fetchRecent();
-  //  }
+    }
 
     fetchRecent = () => {
         axios.get('http://localhost:8080/recent')
@@ -73,11 +73,11 @@ return alert('Hi');
                             <span className="ImageBox__CaptionValue">{this.state.recentImage.caption}</span>
                         </div>
 
-                       // <img
-                            //src={'http://localhost:8080/image/' + this.state.recentImage.filename}
-                           // alt="recent-image"
-                            //className="Recent__Image"
-                     //   />
+                        <img
+                            src={'http://localhost:8080/image/' + this.state.recentImage.filename}
+                            alt="recent-image"
+                            className="Recent__Image"
+                        />
                     </div>
                 </div>
 
