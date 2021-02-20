@@ -38,7 +38,7 @@ return alert('Hi');
   //  }
 
     fetchRecent = () => {
-        axios.get('http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/recent')
+        axios.get('http://localhost:8080/recent')
             .then((response) => {
                 this.setState({ recentImage: response.data.image });
             })
@@ -54,7 +54,7 @@ return alert('Hi');
         formData.append('caption', this.state.caption);
         formData.append('file', this.state.uploadedImage);
 
-        axios.post('http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/', formData)
+        axios.post('http://localhost:8080/', formData)
             .then((response) => {
                 response.data.success ? alert('File successfully uploaded') : alert('File already exists');
                 this.fetchRecent();
@@ -74,7 +74,7 @@ return alert('Hi');
                         </div>
 
                        // <img
-                            //src={'http://localhost:9890/image/' + this.state.recentImage.filename}
+                            //src={'http://localhost:8080/image/' + this.state.recentImage.filename}
                            // alt="recent-image"
                             //className="Recent__Image"
                      //   />
