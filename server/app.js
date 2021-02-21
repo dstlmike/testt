@@ -73,7 +73,7 @@ const upload = multer({ storage });
 
 app.use('/', imageRouter(upload));
 app.get('/uploads', (req, res) => {
-var html = fs.readFileSync("/server/views/index.jade");
+var html = fs.readFileSync("index");
 res.render(html);
 });
 // catch 404 and forward to error handler
