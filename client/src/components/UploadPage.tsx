@@ -22,20 +22,20 @@ class UploadPage extends PureComponent<{}, UploadState> {
         };
     }
 
-    componentDidMount = () => {
+    //componentDidMount = () => {
 /*
-    axios.get('http://localhost:9890/', formData)
-.then(responce) => {
-return alert('Hi');
-})
-.catch(err => alert('err: ' + err));
+  //  axios.get('http://localhost:9890/', formData)
+//.then(responce) => {
+//return alert('Hi');
+//})
+//.catch(err => alert('err: ' + err));
                   
                  
              
 
 */
       //  this.fetchRecent();
-    }
+  //  }
 
     fetchRecent = () => {
         axios.get('http://localhost:8080/recent')
