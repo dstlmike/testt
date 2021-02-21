@@ -20,7 +20,7 @@
   "scripts": {
     "start": "node ../server/bin/www",
     "build": "webpack",    
-    "postinstall": "npm run build",
+    "postinstall": "npm run build"
     
   },
   "eslintConfig": {
