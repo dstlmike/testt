@@ -15,7 +15,7 @@ const imageRouter = require('./routes/image');
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views')); //, 'server/views', 'client/views');
+app.set('/server/views' + 'views'); //path.join(__dirname, 'views')); //, 'server/views', 'client/views');
 //path.join(__dirname, 'server/views'),
 //path.join(__dirname, 'client/views'),
 //]);
@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public'))); //, '/client/public', '/server/public')); // __dirname + 'client/public'})));
-//app.use(express.static(path.join(__dirname, '/client/public')));
+//app.use('/server/public', express.static('public'); //path.join(__dirname, '/client/public')));
 
 
 const mongoose = require('mongoose');
