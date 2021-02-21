@@ -78,8 +78,8 @@ console.error(bind + error);
       break;
     default:
 //console.error(bind + 'Next It');
-      throw error;
-//console.log('Next It');
+      //throw error;
+console.log('Next It');
   }
 }
 
