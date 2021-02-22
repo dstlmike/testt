@@ -29,9 +29,9 @@ class UploadPage extends PureComponent<{}, UploadState> {
 //return alert('Hi');
 //})
 //.catch(err => alert('err: ' + err));
-                  
-                 
-             
+
+
+
 
 */
       //  this.fetchRecent();
@@ -73,11 +73,11 @@ class UploadPage extends PureComponent<{}, UploadState> {
                             <span className="ImageBox__CaptionValue">{this.state.recentImage.caption}</span>
                         </div>
 
-                      //  <img
-                        //    src={'http://localhost:8080/image/' + this.state.recentImage.filename}
-                        //    alt="recent-image"
-                        //    className="Recent__Image"
-                     //   />
+                        <img
+                            src={'http://localhost:8080/image/' + this.state.recentImage.filename}
+                            alt="recent-image"
+                            className="Recent__Image"
+                        />
                     </div>
                 </div>
 

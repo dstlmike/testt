@@ -10,9 +10,9 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "hi": "npm r/server/start && npm --prefix run /client/start",
- 
-    "start": "killall -s KILL node & npm run start:client & npm run start:server"
+    "hi": "node bin/www",
+    "rea": "react-scripts start",
+    "start": "npm run rea && npm run hi"
   },
   "author": "Tarique Ejaz",
   "license": "ISC",
@@ -50,7 +50,7 @@
 
 
 
-  }
+  },
 "eslintConfig": {
     "extends": "react-app"
   },
