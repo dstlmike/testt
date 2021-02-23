@@ -12,7 +12,7 @@
     "install:all": "npm install && npm run install:server && npm run install:client",
     "hi": "node ./bin/www",
     "rea": "node ./node_modules/react-scripts/bin/react-scripts.js start",
-    "start": "npm run rea && npm run hi"
+    "start": "npm run hi & npm run rea"
   },
   "author": "Tarique Ejaz",
   "license": "ISC",
