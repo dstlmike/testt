@@ -35,7 +35,7 @@ class App extends PureComponent<{}> {
           <Switch>
             <Route exact path='/' component={UploadPage} />
             <Route exact path='/list' component={ListPage} />
-       //   <!--  <Redirect from='/**' to='/' /> -->
+            <Redirect from='/**' to='/' /> -->
           </Switch>
         </div>
       </div>
