@@ -11,7 +11,7 @@ const crypto = require('crypto');
 const cors = require('cors');
 const fs = require('fs'); // PUBLIC_URL = process.env.PUBLIC_URL || 'http://localhost:' + process.env.PORT + '/client/public' || http://localhost:' + process.env.PORT + '/server/public';
 const imageRouter = require('./routes/image');
-
+const pug +reequire('pug');
 const app = express();
 
 // view engine setup
@@ -20,7 +20,7 @@ app.set('views', path.join(__dirname, 'views')); //, 'server/views', 'client/vie
 //path.join(__dirname, 'client/views'),
 //]);
 //app.set('views', path.join(__dirname, 'client/views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(cors({
     origin: '*',
@@ -45,7 +45,7 @@ connect.then(() => {
   console.log('Connected to database: GridApp');
 }, (err) => console.log(err));
 
-/* 
+/*
     GridFs Configuration
 */
 
@@ -72,10 +72,7 @@ const storage = new GridFsStorage({
 const upload = multer({ storage });
 
 app.use('/', imageRouter(upload));
-app.get('/uploads', (req, res) => {
-var html = fs.readFileSync("index");
-res.render(html);
-});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
