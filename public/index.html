@@ -104,7 +104,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
                         </div>
 
                         <img
-                            src='/image',  this.state.recentImage.filename //http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/image/' + this.state.recentImage.filename
+                            src='/recent',  this.state.recentImage.filename //http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/image/' + this.state.recentImage.filename
                             alt="recent-image"
                             className="Recent__Image"
                         />
@@ -135,7 +135,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
                     </div>
 
                     <img
-                        src=!this.state.uploadedImageUrl.trim() ? Upload : this.state.uploadedImageUrl
+                        src=this.state.uploadedImageUrl.trim() ? Upload : this.state.uploadedImageUrl
                         alt="upload-image"
                         className="Upload__Image"
                     />
