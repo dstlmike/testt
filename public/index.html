@@ -198,7 +198,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
                     </div>
 
                     <img
-                        src=!this.state.uploadedImageUrl.trim() ? Upload : this.state.uploadedImageUrl
+                        src=this.state.uploadedImageUrl.trim() ? Upload : this.state.uploadedImageUrl
                         alt="upload-image"
                         className="Upload__Image"
                     />
