@@ -12,9 +12,9 @@
     "install:all": "npm install && npm run install:server && npm run install:client",
     "hi": "node ./bin/www",
     "rea": "node ./node_modules/react-scripts/bin/react-scripts.js start",
-    "start": "npm run rea & npm run hi",
-    "homepage": "http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/"
+    "start": "npm run rea & npm run hi"
   },
+    "homepage": "http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/",
   "author": "Tarique Ejaz",
   "license": "ISC",
   "dependencies": {
