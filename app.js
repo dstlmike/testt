@@ -11,7 +11,7 @@ const crypto = require('crypto');
 const cors = require('cors');
 const fs = require('fs'); // PUBLIC_URL = process.env.PUBLIC_URL || 'http://localhost:' + process.env.PORT + '/client/public' || http://localhost:' + process.env.PORT + '/server/public';
 const imageRouter = require('./routes/image');
-const pug +reequire('pug');
+const pug = require('pug');
 const app = express();
 
 // view engine setup
