@@ -22,7 +22,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
         };
     }
 
-    //componentDidMount = () => {
+    componentDidMount = () => {
 /*
   //  axios.get('http://localhost:9890/', formData)
 //.then(responce) => {
@@ -34,8 +34,8 @@ class UploadPage extends PureComponent<{}, UploadState> {
 
 
 */
-      //  this.fetchRecent();
-  //  }
+       this.fetchRecent();
+   }
 
     fetchRecent = () => {
         axios.get('http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/recent')
