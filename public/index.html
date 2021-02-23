@@ -90,10 +90,10 @@ class UploadPage extends PureComponent<{}, UploadState> {
             })
             .catch(err => alert('Error: ' + err));
     }
-
+/*
     render() {
         return (
-\*
+
 <div className="UploadPage">
                 <div className="Recent">
                     <p className="Recent__Title">Recently uploaded file</p>
@@ -130,7 +130,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
                                     uploadedImage: event.target.files[0],
                                 })
                             }}
-/*
+
                         />
                     </div>
 
@@ -193,8 +193,8 @@ class UploadPage extends PureComponent<{}, UploadState> {
                                 this.setState({
                                     uploadedImageUrl: URL.createObjectURL(event.target.files[0]),
                                     uploadedImage: event.target.files[0],
-                               <% }) %>
-                           <% }} %>
+                                }) 
+                            }} 
                         />
                     </div>
 
