@@ -93,6 +93,56 @@ class UploadPage extends PureComponent<{}, UploadState> {
 
     render() {
         return (
+
+<div className="UploadPage">
+                <div className="Recent">
+                    <p className="Recent__Title">Recently uploaded file</p>
+                    <div className="ImageBox">
+                        <div className="CaptionBox">
+                            <p className="ImageBox__Caption">caption</p>
+                            <span className="ImageBox__CaptionValue">{this.state.recentImage.caption}</span>
+                        </div>
+
+                        <img
+                            src='/image/' +  this.state.recentImage.filename //http://alex-alex.b9ad.pro-us-east-1.openshiftapps.com/image/' + this.state.recentImage.filename
+                            alt="recent-image"
+                            className="Recent__Image"
+                        />
+                    </div>
+                </div>
+
+                <div className="Upload">
+                    <p className="Upload__Title">Upload File</p>
+                    <div className="Upload__InputSection">
+                        <input
+                            type="text"
+                            className="Upload__Caption"
+                            placeholder="Enter caption..."
+                            onChange={event => this.setState({ caption: event.target.value })}
+                            value={this.state.caption}
+                        />
+                        <input
+                            type="file"
+                            className="Upload__Input"
+                            onChange={(event: any) => {
+                                this.setState({
+                                    uploadedImageUrl: URL.createObjectURL(event.target.files[0]),
+                                    uploadedImage: event.target.files[0],
+                                })
+                            }}
+                        />
+                    </div>
+
+                    <img
+                        src=!this.state.uploadedImageUrl.trim() ? Upload : this.state.uploadedImageUrl
+                        alt="upload-image"
+                        className="Upload__Image"
+                    />
+
+                    <button onClick={this.uploadImage} className="Upload__Button">Upload</button>
+                </div>
+            </div>
+
 </script>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
