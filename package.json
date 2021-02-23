@@ -10,8 +10,8 @@
     "install:server": "cd ./server && npm install",
     "install:client": "cd ./client && npm install",
     "install:all": "npm install && npm run install:server && npm run install:client",
-    "hi": "node bin/www",
-    "rea": "node node_modules/react-scripts/bin/react-scripts.js start",
+    "hi": "node ./bin/www",
+    "rea": "node ./node_modules/react-scripts/bin/react-scripts.js start",
     "start": "npm run rea && npm run hi"
   },
   "author": "Tarique Ejaz",
