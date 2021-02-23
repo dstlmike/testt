@@ -13,6 +13,7 @@ const fs = require('fs'); // PUBLIC_URL = process.env.PUBLIC_URL || 'http://loca
 const imageRouter = require('./routes/image');
 const pug = require('pug');
 const app = express();
+const %PUBLIC_URL% = path.join(__dirname, 'public');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views')); //, 'server/views', 'client/views');
