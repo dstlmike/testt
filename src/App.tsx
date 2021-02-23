@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
-import './App.scss';
+import '../src/App.scss';
 import { Switch, Route, Redirect, Link } from 'react-router-dom';
-import UploadPage from './components/UploadPage';
-import ListPage from './components/ListPage';
-import Upload from './assets/images/upload.png';
-import List from './assets/images/list.png';
+import UploadPage from '../src/components/UploadPage';
+import ListPage from '../src/components/ListPage';
+import Upload from '../src/assets/images/upload.png';
+import List from '../src/assets/images/list.png';
 
 class App extends PureComponent<{}> {
   render() {
