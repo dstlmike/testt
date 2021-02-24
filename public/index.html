@@ -26,32 +26,9 @@
     -->
     <title>React App</title>
   </head>
-import React, { PureComponent } from 'react';
-import './src/components/style.scss';
-import axios from 'axios';
-import Upload from '.src/assets/images/upload.png';
-
-interface UploadState {
-    recentImage: any;
-    caption: string;
-    uploadedImageUrl: string;
-    uploadedImage: any;
-};
-
-class UploadPage extends PureComponent<{}, UploadState> {
-    constructor(props: {}) {
-        super(props);
-
-        this.state = {
-            recentImage: {},
-            caption: '',
-            uploadedImageUrl: '',
-            uploadedImage: {},
-        };
-    }
 
 <script>
-/*
+
 import React, { PureComponent } from 'react';
 import './src/components/style.scss';
 import axios from 'axios';
@@ -75,7 +52,7 @@ class UploadPage extends PureComponent<{}, UploadState> {
             uploadedImage: {},
         };
     }
-*/
+
     componentDidMount = () => {
 /*
   //  axios.get('http://localhost:9890/', formData)
